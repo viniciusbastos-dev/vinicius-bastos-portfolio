@@ -1,0 +1,10 @@
+.linkList {
+    display: flex;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .linkList {
+        gap: 30px;
+    }
+}

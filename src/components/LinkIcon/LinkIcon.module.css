@@ -1,0 +1,14 @@
+.icon {
+    width: 30px;
+    transition: 400ms ease;
+}
+
+.icon:hover {
+    transform: translateY(-20px);
+}
+
+@media (min-width: 768px) {
+    .icon {
+        width: 60px;
+    }
+}
