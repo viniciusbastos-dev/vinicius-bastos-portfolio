@@ -24,24 +24,22 @@ const App: React.FC = () => {
 
     const projects = [
         {
-            image: "/project.png",
+            image: "/apeperia.png",
             type: "Curso Alura",
-            description: "Site utilizando mobile-first",
+            description: "Site responsivo em mobile-first",
+            link: "https://viniciusbastos-dev.github.io/Projeto-Apeperia/",
         },
         {
-            image: "/project.png",
+            image: "/organo.png",
             type: "Curso Alura",
-            description: "Site utilizando mobile-first",
+            description: "Projeto React para estudo de estados",
+            link: "https://vinicius-bastos-organo.vercel.app",
         },
         {
-            image: "/project.png",
+            image: "/moni-bank.png",
             type: "Curso Alura",
-            description: "Site utilizando mobile-first",
-        },
-        {
-            image: "/project.png",
-            type: "Curso Alura",
-            description: "Site utilizando mobile-first",
+            description: "Estudo de validação de formulários",
+            link: "https://viniciusbastos-dev.github.io/MoniBank/",
         },
     ];
 

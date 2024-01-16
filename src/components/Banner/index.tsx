@@ -31,8 +31,8 @@ const Banner: React.FC<BannerProps> = ({ links }) => {
                 <h2 className={style.jobTitle}>Developer</h2>
             </div>
             <p className={style.about}>
-                Tenho 22 anos, sou desenvolvedor frontend com 1 ano de
-                experiencia como freelancer.
+                Tenho 22 anos, apaixonado pela programação e em busca do
+                primeiro emprego na aréa.
             </p>
         </div>
     );

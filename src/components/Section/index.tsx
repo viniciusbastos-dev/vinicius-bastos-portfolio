@@ -3,7 +3,7 @@ import * as S from "./Section";
 
 interface SectionProps {
     children: ReactNode;
-    title?: string
+    title?: string;
     template?: "flex" | "grid";
     secondary?: boolean;
 }
