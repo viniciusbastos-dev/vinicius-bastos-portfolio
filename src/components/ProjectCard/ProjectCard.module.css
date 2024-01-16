@@ -4,9 +4,13 @@
     flex-direction: column;
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
-    gap: 8px;
+    gap: 10px;
     text-align: center;
     width: 250px;
+}
+
+.image {
+    max-width: 400px;
 }
 
 .cardType {

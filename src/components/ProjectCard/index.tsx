@@ -6,6 +6,7 @@ interface ProjectCardProps {
     description: string;
     type: string;
     link: string;
+    development?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -13,6 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     description,
     type,
     link,
+    development,
 }) => {
     return (
         <div className={style.card}>
@@ -21,6 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </a>
             <p className={style.cardType}>{type}</p>
             <h2 className={style.cardTitle}>{description}</h2>
+            {development && <p>(Em Desenvolvimento)</p>}
         </div>
     );
 };

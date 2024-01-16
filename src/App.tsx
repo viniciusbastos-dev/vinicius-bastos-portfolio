@@ -18,7 +18,7 @@ const App: React.FC = () => {
         {
             image: "/cv-icon.svg",
             alt: "Link to Download CV",
-            link: "https://github.com/viniciusbastos-dev",
+            link: "https://drive.google.com/file/d/1CrHZuc1tf5bYORXDl-xe8N3jtC9UK93R/view",
         },
     ];
 
@@ -40,6 +40,13 @@ const App: React.FC = () => {
             type: "Curso Alura",
             description: "Estudo de validação de formulários",
             link: "https://viniciusbastos-dev.github.io/MoniBank/",
+        },
+        {
+            image: "/moviectionary.png",
+            type: "Estudo de caso",
+            description: "Site consumindo API do TMDB",
+            link: "https://moviectionary-viniciusbastos.fly.dev",
+            development: true,
         },
     ];
 
