@@ -24,8 +24,11 @@ export const Section = styled.section<SectionProps>`
     gap: 80px;
     padding: 60px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 40px 0;
     }
     `}
 

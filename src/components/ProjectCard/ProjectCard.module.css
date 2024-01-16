@@ -6,7 +6,6 @@
     text-transform: uppercase;
     gap: 10px;
     text-align: center;
-    width: 250px;
 }
 
 .image {
@@ -18,12 +17,13 @@
 }
 
 .cardTitle {
+    max-width: 370px;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-@media (min-width: 1024px) {
-    .card {
+@media (max-width: 1024px) {
+    .image {
         width: 370px;
     }
 }
