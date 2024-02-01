@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import { LinkType } from "../Hero";
+import { LinkType } from "../Banner";
 
 interface LinkIconProps {
     data: LinkType

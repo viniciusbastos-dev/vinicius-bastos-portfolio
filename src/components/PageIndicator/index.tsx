@@ -7,7 +7,7 @@ const PageIndicator = () => {
             <S.List>
                 <S.Item>
                     <Link
-                        to="Hero"
+                        to="Home"
                         spy={true}
                         smooth={true}
                         offset={0}
