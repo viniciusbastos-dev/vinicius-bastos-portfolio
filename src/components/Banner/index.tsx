@@ -1,11 +1,9 @@
 import React from "react";
-import style from "./Banner.module.css";
-import IconList from "../LinkList";
+import * as S from "./styles";
 import LinkIcon from "../LinkIcon";
 
 export interface LinkType {
     image: string;
-    alt: string;
     link: string;
 }
 
@@ -15,26 +13,26 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ links }) => {
     return (
-        <div className={style.banner}>
+        <S.Container>
             <div>
-                <h1 className={style.greetings}>Olá, me chamo Vinícius</h1>
-                <div className={style.wrapper}>
-                    <h2 className={style.jobTitle}>React</h2>
-                    <IconList>
+                <S.Greetings>Olá, me chamo Vinícius</S.Greetings>
+                <S.Row>
+                    <S.Title>React</S.Title>
+                    <S.LinkList>
                         {links.map((link) => (
-                            <li>
-                                <LinkIcon {...link} />
-                            </li>
+                            <LinkIcon data={link} />
                         ))}
-                    </IconList>
-                </div>
-                <h2 className={style.jobTitle}>Developer</h2>
+                    </S.LinkList>
+                </S.Row>
+                <S.Title>Developer</S.Title>
             </div>
-            <p className={style.about}>
-                Tenho 22 anos, apaixonado pela programação e em busca do
-                primeiro emprego na aréa.
-            </p>
-        </div>
+            <S.About>
+                Tenho 22 anos, sou apaixonado pela programação desde a
+                adolescência. Há um ano atuo como freelancer, dedicando-me a me
+                aprofundar nas tecnologias que domino e, claro, sempre buscando
+                aprender coisas novas.
+            </S.About>
+        </S.Container>
     );
 };
 

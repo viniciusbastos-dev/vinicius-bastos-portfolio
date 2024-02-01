@@ -1,18 +1,23 @@
 import React, { ReactNode } from "react";
-import * as S from "./Section";
+import * as S from "./styles";
 
 interface SectionProps {
     children: ReactNode;
-    title?: string;
-    template?: "flex" | "grid";
+    pageID: string;
     secondary?: boolean;
+    customPadding?: boolean;
 }
 
-const Section: React.FC<SectionProps> = ({ children, template, secondary }) => {
+const Section: React.FC<SectionProps> = (props, { ...rest }) => {
     return (
-        <S.Section isSecondary={secondary} template={template}>
-            {children}
-        </S.Section>
+        <S.Container
+            id={props.pageID}
+            isSecondary={props.secondary}
+            customPadding={props.customPadding}
+            {...rest}
+        >
+            {props.children}
+        </S.Container>
     );
 };
 

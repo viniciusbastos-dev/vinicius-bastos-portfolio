@@ -1,12 +1,18 @@
 import React from "react";
-import style from "./LinkIcon.module.css";
+import * as S from "./styles";
 import { LinkType } from "../Banner";
 
-const LinkIcon: React.FC<LinkType> = ({ image, alt, link }) => {
+interface LinkIconProps {
+    data: LinkType
+}
+
+const LinkIcon: React.FC<LinkIconProps> = ({ data }) => {
     return (
-        <a href={link} target="_blank">
-            <img className={style.icon} src={image} alt={alt} />
-        </a>
+        <S.ListItem>
+            <a href={data.link} target="_blank">
+                <S.Icon src={data.image}></S.Icon>
+            </a>
+        </S.ListItem>
     );
 };
 

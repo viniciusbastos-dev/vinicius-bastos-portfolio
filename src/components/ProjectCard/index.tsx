@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./ProjectCard.module.css";
+import * as S from "./styles";
 
 interface ProjectCardProps {
     image: string;
@@ -17,14 +17,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     development,
 }) => {
     return (
-        <div className={style.card}>
+        <S.Container>
             <a href={link} target="_blank">
-                <img className={style.image} src={image} alt={description} />
+                <S.Image src={image} alt={description} />
             </a>
-            <p className={style.cardType}>{type}</p>
-            <h2 className={style.cardTitle}>{description}</h2>
+            <S.Type>{type}</S.Type>
+            <S.Title>{description}</S.Title>
             {development && <p>(Em Desenvolvimento)</p>}
-        </div>
+        </S.Container>
     );
 };
 
