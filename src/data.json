@@ -1,39 +1,39 @@
 {
     "links": [
         {
-            "image": "./src/assets/github-icon.svg",
+            "image": "/assets/github-icon.svg",
             "link": "https://github.com/viniciusbastos-dev"
         },
         {
-            "image": "./src/assets/linkedin-icon.svg",
+            "image": "/assets/linkedin-icon.svg",
             "link": "https://linkedin.com/in/vinicius-bastos-silva"
         },
         {
-            "image": "./src/assets/cv-icon.svg",
+            "image": "/assets/cv-icon.svg",
             "link": "https://drive.google.com/file/d/1CrHZuc1tf5bYORXDl-xe8N3jtC9UK93R/view"
         }
     ],
     "projects": [
         {
-            "image": "./src/assets/apeperia.png",
+            "image": "/assets/apeperia.png",
             "type": "Curso Alura",
             "description": "Site responsivo em mobile-first",
             "link": "https://viniciusbastos-dev.github.io/Projeto-Apeperia/"
         },
         {
-            "image": "./src/assets/organo.png",
+            "image": "/assets/organo.png",
             "type": "Curso Alura",
             "description": "Projeto React para estudo de estados",
             "link": "https://vinicius-bastos-organo.vercel.app"
         },
         {
-            "image": "./src/assets/moni-bank.png",
+            "image": "/assets/moni-bank.png",
             "type": "Curso Alura",
             "description": "Estudo de validação de formulários",
             "link": "https://viniciusbastos-dev.github.io/MoniBank/"
         },
         {
-            "image": "./src/assets/moviectionary.png",
+            "image": "/assets/moviectionary.png",
             "type": "Estudo de caso",
             "description": "Site consumindo API do TMDB",
             "link": "https://moviectionary-viniciusbastos.fly.dev",
