@@ -3,20 +3,24 @@ import * as S from "./styles";
 
 interface SectionProps {
     children: ReactNode;
-    pageID: string;
+    pageID?: string;
     secondary?: boolean;
     customPadding?: boolean;
 }
 
-const Section: React.FC<SectionProps> = (props, { ...rest }) => {
+const Section: React.FC<SectionProps> = ({
+    pageID,
+    secondary,
+    customPadding,
+    children,
+}) => {
     return (
         <S.Container
-            id={props.pageID}
-            isSecondary={props.secondary}
-            customPadding={props.customPadding}
-            {...rest}
+            id={pageID}
+            $isSecondary={secondary}
+            $customPadding={customPadding}
         >
-            {props.children}
+            {children}
         </S.Container>
     );
 };

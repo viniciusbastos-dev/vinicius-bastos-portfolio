@@ -7,11 +7,11 @@ export interface LinkType {
     link: string;
 }
 
-interface BannerProps {
+interface HeroProps {
     links: LinkType[];
 }
 
-const Banner: React.FC<BannerProps> = ({ links }) => {
+const Hero: React.FC<HeroProps> = ({ links }) => {
     return (
         <S.Container>
             <div>
@@ -20,7 +20,7 @@ const Banner: React.FC<BannerProps> = ({ links }) => {
                     <S.Title>React</S.Title>
                     <S.LinkList>
                         {links.map((link) => (
-                            <LinkIcon data={link} />
+                            <LinkIcon key={link.link} data={link} />
                         ))}
                     </S.LinkList>
                 </S.Row>
@@ -36,4 +36,4 @@ const Banner: React.FC<BannerProps> = ({ links }) => {
     );
 };
 
-export default Banner;
+export default Hero;

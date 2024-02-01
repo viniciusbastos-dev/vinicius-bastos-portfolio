@@ -1,24 +1,43 @@
 import * as S from "./styles";
+import { Link } from "react-scroll";
 
 const PageIndicator = () => {
     return (
         <S.Container>
             <S.List>
-                <a href="#Home">
-                    <S.Item>
+                <S.Item>
+                    <Link
+                        to="Hero"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                    >
                         <S.Circle></S.Circle>
-                    </S.Item>
-                </a>
-                <a href="#Projects">
-                    <S.Item>
+                    </Link>
+                </S.Item>
+                <S.Item>
+                    <Link
+                        to="Projects"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                    >
                         <S.Circle></S.Circle>
-                    </S.Item>
-                </a>
-                <a href="#Skills">
-                    <S.Item>
+                    </Link>
+                </S.Item>
+                <S.Item>
+                    <Link
+                        to="Skills"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                    >
                         <S.Circle></S.Circle>
-                    </S.Item>
-                </a>
+                    </Link>
+                </S.Item>
             </S.List>
         </S.Container>
     );

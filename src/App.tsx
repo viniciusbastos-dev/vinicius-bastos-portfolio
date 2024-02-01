@@ -10,7 +10,7 @@ import {
 import GlobalStyle from "./themes/globalStyles";
 import PageIndicator from "./components/PageIndicator";
 import Section from "./components/Section";
-import Banner from "./components/Banner";
+import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import SkillCard from "./components/SkillCard";
 
@@ -47,17 +47,17 @@ const App: React.FC = () => {
         <main>
             <GlobalStyle />
             <PageIndicator />
-            <Section pageID="Home">
-                <Banner links={links} />
+            <Section pageID="Hero">
+                <Hero links={links} />
             </Section>
             <Section pageID="Projects" customPadding secondary>
                 {projects.map((project) => (
-                    <ProjectCard {...project} />
+                    <ProjectCard key={project.description} {...project} />
                 ))}
             </Section>
             <Section pageID="Skills" customPadding>
                 {skills.map((skill) => (
-                    <SkillCard data={skill} />
+                    <SkillCard key={skill.name} data={skill} />
                 ))}
             </Section>
         </main>

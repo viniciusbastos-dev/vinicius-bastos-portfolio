@@ -20,10 +20,11 @@ export const Item = styled.li`
 export const Circle = styled.span`
     display: block;
     border-radius: 50%;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-color: #fff;
     transition-duration: 200ms;
+    cursor: pointer;
 
     &:hover {
         transform: scale(2);
