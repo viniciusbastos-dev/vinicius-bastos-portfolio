@@ -36,7 +36,7 @@
             "image": "/assets/moviectionary.png",
             "type": "Estudo de caso",
             "description": "Site consumindo API do TMDB",
-            "link": "https://moviectionary-viniciusbastos.fly.dev",
+            "link": "https://moviectionary.vercel.app",
             "development": true
         }
     ]
