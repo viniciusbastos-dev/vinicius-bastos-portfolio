@@ -2,11 +2,13 @@ import * as S from "./styles";
 import { Link } from "react-scroll";
 
 const PageIndicator = () => {
+
     return (
         <S.Container>
             <S.List>
                 <S.Item>
                     <Link
+                        activeClass="active"
                         to="Home"
                         spy={true}
                         smooth={true}
@@ -18,6 +20,7 @@ const PageIndicator = () => {
                 </S.Item>
                 <S.Item>
                     <Link
+                        activeClass="active"
                         to="Projects"
                         spy={true}
                         smooth={true}
@@ -29,6 +32,7 @@ const PageIndicator = () => {
                 </S.Item>
                 <S.Item>
                     <Link
+                        activeClass="active"
                         to="Skills"
                         spy={true}
                         smooth={true}

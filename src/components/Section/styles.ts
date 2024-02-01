@@ -16,7 +16,6 @@ export const Container = styled.section<SectionProps>`
 
     box-sizing: border-box;
     min-height: 100svh;
-    
     display: flex;
     justify-content: center;
     align-items: center;

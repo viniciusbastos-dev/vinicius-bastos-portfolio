@@ -7,14 +7,15 @@ export const Container = styled.div`
 `;
 
 export const List = styled.ul`
+    position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 15px;
 `;
 
 export const Item = styled.li`
-    display: flex;
-    align-items: center;
+    cursor: pointer;
 `;
 
 export const Circle = styled.span`
@@ -23,10 +24,12 @@ export const Circle = styled.span`
     width: 6px;
     height: 6px;
     background-color: #fff;
-    transition-duration: 200ms;
-    cursor: pointer;
+    transition: 0.3s;
+    .active & {
+       transform: scale(2);
+    }
 
-    &:hover {
+    &:not(a.active):hover {
         transform: scale(2);
     }
 `;
