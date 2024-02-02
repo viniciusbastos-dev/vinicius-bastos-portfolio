@@ -2,7 +2,6 @@ import * as S from "./styles";
 import { Link } from "react-scroll";
 
 const PageIndicator = () => {
-
     return (
         <S.Container>
             <S.List>
@@ -15,7 +14,10 @@ const PageIndicator = () => {
                         offset={0}
                         duration={500}
                     >
-                        <S.Circle></S.Circle>
+                        <S.Row>
+                            <S.Text>Home</S.Text>
+                            <S.Circle></S.Circle>
+                        </S.Row>
                     </Link>
                 </S.Item>
                 <S.Item>
@@ -27,7 +29,10 @@ const PageIndicator = () => {
                         offset={0}
                         duration={500}
                     >
-                        <S.Circle></S.Circle>
+                        <S.Row>
+                            <S.Text>Projects</S.Text>
+                            <S.Circle></S.Circle>
+                        </S.Row>
                     </Link>
                 </S.Item>
                 <S.Item>
@@ -39,7 +44,10 @@ const PageIndicator = () => {
                         offset={0}
                         duration={500}
                     >
-                        <S.Circle></S.Circle>
+                        <S.Row>
+                            <S.Text>Skills</S.Text>
+                            <S.Circle></S.Circle>
+                        </S.Row>
                     </Link>
                 </S.Item>
             </S.List>
