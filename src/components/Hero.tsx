@@ -24,7 +24,7 @@ const Hero: React.FC<Props> = () => {
     {
       type: "p",
       text: "Especializado em criar experiências digitais eficientes e acessíveis, com foco em soluções inovadoras e centradas no usuário.",
-      className: "mt-5 font-mono text-sm sm:text-base max-w-[500px]",
+      className: "mt-5 font-mono text-sm sm:text-base max-w-[550px]",
     },
   ];
 

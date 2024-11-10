@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import FlyingLight from "@/components/Light";
 import SectionContainer from "@/components/SectionContainer";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export default function Home() {
   return (

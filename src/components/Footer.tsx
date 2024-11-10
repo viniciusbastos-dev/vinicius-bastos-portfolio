@@ -13,37 +13,33 @@ const Footer: React.FC<Props> = () => {
       transition: { duration: 1, delay: 2 },
     },
   };
-
   return (
-    <motion.footer
-      initial="hidden"
-      animate="visible"
-      variants={fadeIn}
-      className="hidden md:flex pointer-events-none fixed bottom-0 inset-x-0 items-end justify-between px-5 font-mono"
-    >
-      <ul className="socials-list">
-        <li className="social-link">
-          <Link href="https://github.com/viniciusbastos-dev" target="_blank">
-            <SVG.GithubIcon />
-          </Link>
-        </li>
-        <li className="social-link">
-          <Link
-            href="https://www.linkedin.com/in/vinicius-bastos-silva/"
-            target="_blank"
-          >
-            <SVG.LinkedinIcon />
-          </Link>
-        </li>
-      </ul>
+    <motion.footer initial="hidden" animate="visible" variants={fadeIn}>
+      <div className="hidden md:flex pointer-events-none fixed bottom-0 inset-x-0 items-end justify-between px-5 font-mono">
+        <ul className="socials-list">
+          <li className="social-link">
+            <Link href="https://github.com/viniciusbastos-dev" target="_blank">
+              <SVG.GithubIcon />
+            </Link>
+          </li>
+          <li className="social-link">
+            <Link
+              href="https://www.linkedin.com/in/vinicius-bastos-silva/"
+              target="_blank"
+            >
+              <SVG.LinkedinIcon />
+            </Link>
+          </li>
+        </ul>
 
-      <ul className="socials-list relative">
-        <li className="social-link email text-xs md:text-sm">
-          <Link href="mailto:viniciusbsilva57@gmail.com">
-            viniciusbsilva57@gmail.com
-          </Link>
-        </li>
-      </ul>
+        <ul className="socials-list relative">
+          <li className="social-link email text-xs md:text-sm">
+            <Link href="mailto:viniciusbsilva57@gmail.com">
+              viniciusbsilva57@gmail.com
+            </Link>
+          </li>
+        </ul>
+      </div>
     </motion.footer>
   );
 };

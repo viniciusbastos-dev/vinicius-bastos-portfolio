@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import MobileSidebar from "@/components/MobileSidebar";
 
 const SFMono = localFont({
   src: [{ path: "../assets/fonts/SFMono-Regular.otf", weight: "400" }],
@@ -30,8 +32,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${SFMono.variable} ${SFDisplay.variable}`}>
       <body>
-        <Header />
-        {children}
+        <SidebarProvider>
+          <Header />
+          {children}
+        </SidebarProvider>
         <Footer />
       </body>
     </html>

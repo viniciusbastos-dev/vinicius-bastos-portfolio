@@ -6,13 +6,16 @@ import NavLink from "./NavLink";
 import { motion } from "framer-motion";
 import { useScrollDirection } from "@/hooks";
 import { cn } from "@/lib/utils";
+import { SidebarTrigger, useSidebar } from "./ui/sidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
+import MobileSidebar from "./MobileSidebar";
 
 interface Props {}
 
 const Header: React.FC<Props> = () => {
   const scrollDir = useScrollDirection();
   const [isOnTop, setIsOnTop] = useState(true);
-
+  const { isMobile } = useSidebar();
   const handleScroll = () => {
     setIsOnTop(window.scrollY < 50);
   };
@@ -35,45 +38,53 @@ const Header: React.FC<Props> = () => {
   });
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 px-16 h-[100px] flex justify-end items-center font-mono transition-all duration-300 backdrop-blur-md",
-        scrollDir === "up" &&
-          !isOnTop &&
-          "h-[70px] translate-y-0 bg-navy_700/85 shadow-xlg",
-        scrollDir === "down" && !isOnTop && "h-[70px] -translate-y-[70px] "
+    <>
+      {!isMobile ? (
+        <header
+          className={cn(
+            "hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-mono transition-all duration-300 backdrop-blur-md",
+            scrollDir === "up" &&
+              !isOnTop &&
+              "h-[70px] translate-y-0 bg-navy_700/85 shadow-xlg",
+            scrollDir === "down" && !isOnTop && "h-[70px] -translate-y-[70px] "
+          )}
+        >
+          <nav className="navigation-container md:flex items-center gap-5 hidden">
+            <ul className="flex gap-5 items-center">
+              {Links.map((link, index) => (
+                <React.Fragment key={link.href}>
+                  <motion.li
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeDown(index)}
+                  >
+                    <NavLink href={link.href}>
+                      <span className="text-green_700 text-sm">
+                        {index < 10 ? `0${index + 1}. ` : `${index + 1}. `}
+                      </span>
+                      {link.text}
+                    </NavLink>
+                  </motion.li>
+                  {index === Links.length - 1 && (
+                    <motion.li
+                      initial="hidden"
+                      animate="visible"
+                      variants={fadeDown(index + 1)}
+                    >
+                      <Button small>Currículo</Button>
+                    </motion.li>
+                  )}
+                </React.Fragment>
+              ))}
+            </ul>
+          </nav>
+        </header>
+      ) : (
+        <MobileSidebar />
       )}
-    >
-      <nav className="navigation-container md:flex items-center gap-5 hidden">
-        <ul className="flex gap-5 items-center">
-          {Links.map((link, index) => (
-            <React.Fragment key={link.href}>
-              <motion.li
-                initial="hidden"
-                animate="visible"
-                variants={fadeDown(index)}
-              >
-                <NavLink href={link.href}>
-                  <span className="text-green_700 text-sm">
-                    {index < 10 ? `0${index + 1}. ` : `${index + 1}. `}
-                  </span>
-                  {link.text}
-                </NavLink>
-              </motion.li>
-              {index === Links.length - 1 && (
-                <motion.li
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeDown(index + 1)}
-                >
-                  <Button text="Currículo" small />
-                </motion.li>
-              )}
-            </React.Fragment>
-          ))}
-        </ul>
-      </nav>
-    </header>
+
+      <SidebarTrigger className="absolute top-10 right-10 md:hidden" />
+    </>
   );
 };
 
