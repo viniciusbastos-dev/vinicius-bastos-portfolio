@@ -54,6 +54,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${SFMono.variable} ${SFDisplay.variable}`}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="lLZmQ6GssblPpL7Ydr4RhSpmFVGVrtxy9HpNkN6j99s"
+        />
+      </head>
+
       <body>
         <SidebarProvider>
           <Header />
