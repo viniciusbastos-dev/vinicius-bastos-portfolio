@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Projects from '@/components/Projects';
 import FlyingLight from '@/components/Light';
 import SectionContainer from '@/components/SectionContainer';
 
@@ -13,8 +14,8 @@ export default function Home() {
         <About />
       </SectionContainer>
 
-      <SectionContainer id="projetos" className="min-h-screen">
-        <h1>Projetos</h1>
+      <SectionContainer id="projetos" className="min-h-screen flex items-center">
+        <Projects />
       </SectionContainer>
 
       <SectionContainer id="contato" className="min-h-screen">

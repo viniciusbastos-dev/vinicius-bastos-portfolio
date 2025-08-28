@@ -13,7 +13,7 @@ export default function Footer() {
   };
   return (
     <motion.footer initial="hidden" animate="visible" variants={fadeIn}>
-      <div className="hidden md:flex pointer-events-none fixed bottom-0 inset-x-0 items-end justify-between px-5 font-firaCode">
+      <div className="hidden md:flex pointer-events-none fixed bottom-0 inset-x-0 items-end justify-between px-5 font-SFMono">
         <ul className="socials-list">
           <li className="social-link">
             <Link href="https://github.com/viniciusbastos-dev" target="_blank">

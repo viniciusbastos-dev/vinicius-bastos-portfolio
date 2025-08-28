@@ -18,7 +18,7 @@ const ProjectCard: React.FC<Props> = () => {
           </p>
         </div>
 
-        <ul className="project-end flex gap-3 font-firaCode text-sm">
+        <ul className="project-end flex gap-3 font-SFMono text-sm">
           <li>React</li>
           <li>NextJS</li>
           <li>Tailwind</li>

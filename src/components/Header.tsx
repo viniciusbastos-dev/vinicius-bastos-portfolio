@@ -39,7 +39,7 @@ export default function Header() {
       {!isMobile ? (
         <header
           className={cn(
-            'z-50 hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-firaCode transition-all duration-300 backdrop-blur-md',
+            'z-50 hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-SFMono transition-all duration-300 backdrop-blur-md',
             scrollDir === 'up' && !isOnTop && 'h-[70px] translate-y-0 bg-navy-700/85 shadow-lg rounded-b-lg',
             scrollDir === 'down' && !isOnTop && 'h-[70px] -translate-y-[70px] '
           )}
@@ -58,7 +58,9 @@ export default function Header() {
                   </motion.li>
                   {index === LINKS.length - 1 && (
                     <motion.li initial="hidden" animate="visible" variants={fadeDown(index + 1)}>
-                      <Button variant="custom" size="small">Currículo</Button>
+                      <Button variant="custom" size="small">
+                        Currículo
+                      </Button>
                     </motion.li>
                   )}
                 </React.Fragment>
