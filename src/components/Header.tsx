@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
-import NavLink from './NavLink';
-import { Button } from './ui/button';
-import { motion } from 'motion/react';
-import { SidebarTrigger, useSidebar } from './ui/sidebar';
-import MobileSidebar from './MobileSidebar';
-import useScrollDirection from '@/hooks/use-scroll-direction';
-import { LINKS } from '@/config/routes';
-import { cn } from '@/lib/utils';
+"use client";
+import React from "react";
+import NavLink from "./NavLink";
+import { Button } from "./ui/button";
+import { motion } from "motion/react";
+import { SidebarTrigger, useSidebar } from "./ui/sidebar";
+import MobileSidebar from "./MobileSidebar";
+import useScrollDirection from "@/hooks/use-scroll-direction";
+import { LINKS } from "@/config/routes";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const scrollDir = useScrollDirection();
@@ -18,10 +18,10 @@ export default function Header() {
   }, []);
 
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
 
@@ -39,16 +39,22 @@ export default function Header() {
       {!isMobile ? (
         <header
           className={cn(
-            'z-50 hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-SFMono transition-all duration-300 backdrop-blur-md',
-            scrollDir === 'up' && !isOnTop && 'h-[70px] translate-y-0 bg-navy-700/85 shadow-lg rounded-b-lg',
-            scrollDir === 'down' && !isOnTop && 'h-[70px] -translate-y-[70px] '
+            "z-50 hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-SFMono transition-all duration-300 backdrop-blur-md",
+            scrollDir === "up" &&
+              !isOnTop &&
+              "h-[70px] translate-y-0 bg-navy-700/85 shadow-lg rounded-b-lg",
+            scrollDir === "down" && !isOnTop && "h-[70px] -translate-y-[70px] ",
           )}
         >
           <nav className="navigation-container md:flex items-center gap-5 hidden">
             <ul className="flex gap-5 items-center">
               {LINKS.map((link, index) => (
                 <React.Fragment key={link.href}>
-                  <motion.li initial="hidden" animate="visible" variants={fadeDown(index)}>
+                  <motion.li
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeDown(index)}
+                  >
                     <NavLink href={link.href}>
                       <span className="text-green-700 text-sm">
                         {index < 10 ? `0${index + 1}. ` : `${index + 1}. `}
@@ -57,7 +63,11 @@ export default function Header() {
                     </NavLink>
                   </motion.li>
                   {index === LINKS.length - 1 && (
-                    <motion.li initial="hidden" animate="visible" variants={fadeDown(index + 1)}>
+                    <motion.li
+                      initial="hidden"
+                      animate="visible"
+                      variants={fadeDown(index + 1)}
+                    >
                       <Button variant="custom" size="small">
                         Currículo
                       </Button>

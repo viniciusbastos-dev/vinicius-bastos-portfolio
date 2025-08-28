@@ -11,11 +11,9 @@ const SectionContainer: React.FC<Props> = ({
   ...rest
 }) => {
   return (
-    <>
-      <section {...rest} className={cn("min-h-screen", className)}>
-        {children}
-      </section>
-    </>
+    <section {...rest} className={cn("min-h-screen", className)}>
+      {children}
+    </section>
   );
 };
 

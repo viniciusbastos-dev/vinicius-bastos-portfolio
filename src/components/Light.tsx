@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 
-interface Props {}
+type Props = Record<string, never>;
 const FlyingLight: React.FC<Props> = () => {
   const [position, setPosition] = useState({ x: 150, y: 150 });
 
   useEffect(() => {
-    if (typeof window === undefined) return;
+    if (typeof window === "undefined") return;
     const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth < 768) return;
       setPosition({ x: e.clientX, y: e.clientY });

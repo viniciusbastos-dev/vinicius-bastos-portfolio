@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 /* Custom animations for About section */
 @keyframes fade-in-up {
@@ -66,7 +66,7 @@
   position: relative;
   bottom: 4px;
   counter-increment: section;
-  content: '0' counter(section) '.';
+  content: "0" counter(section) ".";
   margin-right: 10px;
   color: #64ffda;
   font-family: var(--font-mono);
@@ -75,7 +75,7 @@
 }
 
 .numbered-heading:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   top: -5px;
@@ -303,6 +303,17 @@ body {
   margin-bottom: 100px;
 }
 
+.project-content {
+  position: relative;
+  grid-area: 1 / 1 / -1 / 7;
+}
+
+.project-image {
+  position: relative;
+  grid-area: 1 / 6 / -1 / -1;
+  z-index: -1;
+}
+
 .project-item:nth-of-type(2n + 1) .project-content {
   grid-column: 7 / -1;
   text-align: right;
@@ -312,17 +323,6 @@ body {
   grid-column: 1 / 8;
 }
 
-.project-content {
-  position: relative;
-  grid-area: 1 / 1 / -1 / 7;
-}
-
 .project-item:nth-of-type(2n + 1) .project-content .project-end {
   justify-content: flex-end;
-}
-
-.project-image {
-  position: relative;
-  grid-area: 1 / 6 / -1 / -1;
-  z-index: -1;
 }

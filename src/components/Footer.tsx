@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import * as motion from 'motion/react-client';
-import { LiaLinkedin } from 'react-icons/lia';
-import { FaGithub } from 'react-icons/fa6';
+import Link from "next/link";
+import * as motion from "motion/react-client";
+import { LiaLinkedin } from "react-icons/lia";
+import { FaGithub } from "react-icons/fa6";
 
 export default function Footer() {
   const fadeIn = {
@@ -21,7 +21,10 @@ export default function Footer() {
             </Link>
           </li>
           <li className="social-link">
-            <Link href="https://www.linkedin.com/in/vinicius-bastos-silva/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/vinicius-bastos-silva/"
+              target="_blank"
+            >
               <LiaLinkedin />
             </Link>
           </li>
@@ -29,7 +32,9 @@ export default function Footer() {
 
         <ul className="socials-list relative">
           <li className="social-link email text-xs md:text-sm">
-            <Link href="mailto:viniciusbsilva57@gmail.com">viniciusbsilva57@gmail.com</Link>
+            <Link href="mailto:viniciusbsilva57@gmail.com">
+              viniciusbsilva57@gmail.com
+            </Link>
           </li>
         </ul>
       </div>

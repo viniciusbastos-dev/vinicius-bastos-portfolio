@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const SCROLL_UP = 'up';
-const SCROLL_DOWN = 'down';
+const SCROLL_UP = "up";
+const SCROLL_DOWN = "down";
 
 type ScrollDirection = typeof SCROLL_UP | typeof SCROLL_DOWN;
 
@@ -16,7 +16,8 @@ const useScrollDirection = ({
   thresholdPixels = 0,
   off = false,
 }: UseScrollDirectionProps = {}): ScrollDirection => {
-  const [scrollDir, setScrollDir] = React.useState<ScrollDirection>(initialDirection);
+  const [scrollDir, setScrollDir] =
+    React.useState<ScrollDirection>(initialDirection);
 
   React.useEffect(() => {
     const threshold = thresholdPixels;
@@ -43,9 +44,11 @@ const useScrollDirection = ({
       }
     };
 
-    !off ? window.addEventListener('scroll', onScroll) : setScrollDir(initialDirection);
+    !off
+      ? window.addEventListener("scroll", onScroll)
+      : setScrollDir(initialDirection);
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, [initialDirection, thresholdPixels, off]);
 
   return scrollDir;

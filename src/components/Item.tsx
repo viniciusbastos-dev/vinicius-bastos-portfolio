@@ -3,8 +3,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-interface Props {}
-const StackCard: React.FC<Props> = () => {
+export default function StackCard() {
   const isMobile = useIsMobile();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -42,6 +41,4 @@ const StackCard: React.FC<Props> = () => {
       </motion.div>
     </div>
   );
-};
-
-export default StackCard;
+}
