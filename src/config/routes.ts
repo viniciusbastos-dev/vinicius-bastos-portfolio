@@ -1,21 +1,21 @@
-import { FaHome } from "react-icons/fa";
+import { FaUser, FaBriefcase, FaEnvelope } from 'react-icons/fa';
 
 export const ROUTES = {};
 
 export const LINKS = [
   {
-    href: "/",
-    text: "Home",
-    icon: FaHome,
+    href: '#sobre-mim',
+    text: 'Sobre mim',
+    icon: FaUser,
   },
   {
-    href: "/",
-    text: "Home",
-    icon: FaHome,
+    href: '#projetos',
+    text: 'Projetos',
+    icon: FaBriefcase,
   },
   {
-    href: "/",
-    text: "Home",
-    icon: FaHome,
+    href: '#contato',
+    text: 'Contato',
+    icon: FaEnvelope,
   },
 ];

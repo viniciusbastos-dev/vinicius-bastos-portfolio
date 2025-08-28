@@ -1,51 +1,44 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
-import {
-  TbBrandReact,
-  TbBrandNextjs,
-  TbBrandTypescript,
-  TbBrandHtml5,
-  TbBrandCss3,
-} from "react-icons/tb";
+import { useEffect, useRef } from 'react';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { TbBrandReact, TbBrandNextjs, TbBrandTypescript, TbBrandHtml5, TbBrandCss3 } from 'react-icons/tb';
 
 const projects = [
   {
-    title: "Portfolio Moderno",
+    title: 'Portfolio Moderno',
     description:
-      "Portfolio pessoal desenvolvido com Next.js, TypeScript e Tailwind CSS. Design moderno com animações e responsivo.",
+      'Portfolio pessoal desenvolvido com Next.js, TypeScript e Tailwind CSS. Design moderno com animações e responsivo.',
     technologies: [
-      { name: "Next.js", icon: <TbBrandNextjs className="w-5 h-5" /> },
-      { name: "TypeScript", icon: <TbBrandTypescript className="w-5 h-5" /> },
-      { name: "Tailwind", icon: <TbBrandCss3 className="w-5 h-5" /> },
+      { name: 'Next.js', icon: <TbBrandNextjs className="w-5 h-5" /> },
+      { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
+      { name: 'Tailwind', icon: <TbBrandCss3 className="w-5 h-5" /> },
     ],
-    github: "https://github.com/viniciusbastos-dev/portfolio",
+    github: 'https://github.com/viniciusbastos-dev/portfolio',
     demo: null,
     featured: true,
   },
   {
-    title: "Decodificador de Texto",
+    title: 'Decodificador de Texto',
     description:
-      "Primeiro challenge Oracle ONE - Aplicação para criptografar e descriptografar textos com interface intuitiva.",
+      'Primeiro challenge Oracle ONE - Aplicação para criptografar e descriptografar textos com interface intuitiva.',
     technologies: [
-      { name: "HTML", icon: <TbBrandHtml5 className="w-5 h-5" /> },
-      { name: "CSS", icon: <TbBrandCss3 className="w-5 h-5" /> },
-      { name: "JavaScript", icon: <TbBrandReact className="w-5 h-5" /> },
+      { name: 'HTML', icon: <TbBrandHtml5 className="w-5 h-5" /> },
+      { name: 'CSS', icon: <TbBrandCss3 className="w-5 h-5" /> },
+      { name: 'JavaScript', icon: <TbBrandReact className="w-5 h-5" /> },
     ],
-    github:
-      "https://github.com/viniciusbastos-dev/Challenge-Oracle-ONE-Criptografador",
+    github: 'https://github.com/viniciusbastos-dev/Challenge-Oracle-ONE-Criptografador',
     demo: null,
     featured: true,
   },
   {
-    title: "Plataforma para Fotógrafos",
+    title: 'Plataforma para Fotógrafos',
     description:
-      "Plataforma completa para fotógrafos gerenciarem portfólio e clientes. Em desenvolvimento com tecnologias modernas.",
+      'Plataforma completa para fotógrafos gerenciarem portfólio e clientes. Em desenvolvimento com tecnologias modernas.',
     technologies: [
-      { name: "React", icon: <TbBrandReact className="w-5 h-5" /> },
-      { name: "TypeScript", icon: <TbBrandTypescript className="w-5 h-5" /> },
-      { name: "Node.js", icon: <TbBrandNextjs className="w-5 h-5" /> },
+      { name: 'React', icon: <TbBrandReact className="w-5 h-5" /> },
+      { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
+      { name: 'Node.js', icon: <TbBrandNextjs className="w-5 h-5" /> },
     ],
     github: null,
     demo: null,
@@ -53,14 +46,13 @@ const projects = [
     inProgress: true,
   },
   {
-    title: "Barbearia Alura",
-    description:
-      "Website responsivo para barbearia desenvolvido durante cursos de HTML e CSS da Alura.",
+    title: 'Barbearia Alura',
+    description: 'Website responsivo para barbearia desenvolvido durante cursos de HTML e CSS da Alura.',
     technologies: [
-      { name: "HTML", icon: <TbBrandHtml5 className="w-5 h-5" /> },
-      { name: "CSS", icon: <TbBrandCss3 className="w-5 h-5" /> },
+      { name: 'HTML', icon: <TbBrandHtml5 className="w-5 h-5" /> },
+      { name: 'CSS', icon: <TbBrandCss3 className="w-5 h-5" /> },
     ],
-    github: "https://github.com/viniciusbastos-dev/Projeto-Barbearia-Alura",
+    github: 'https://github.com/viniciusbastos-dev/Projeto-Barbearia-Alura',
     demo: null,
     featured: false,
   },
@@ -75,11 +67,11 @@ export default function Projects() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in");
+            entry.target.classList.add('animate-in');
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     projectRefs.current.forEach((ref) => {
@@ -93,25 +85,17 @@ export default function Projects() {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <div className="max-w-6xl mx-auto px-4">
-      <div
-        ref={containerRef}
-        className="opacity-0 animate-fade-in-up animation-delay-300"
-      >
+    <div className="max-w-7xl mx-auto px-4">
+      <div ref={containerRef} className="opacity-0 animate-fade-in-up animation-delay-300">
         <div className="flex items-center gap-4 mb-16">
           <span className="font-SFMono text-lg text-green-700">02.</span>
-          <h2 className="font-SFMono text-4xl font-bold text-lightest-slate">
-            Projetos
-          </h2>
+          <h2 className="font-SFMono text-4xl font-bold text-lightest-slate">Projetos</h2>
           <div className="flex-1 h-px ml-8 bg-slate-700"></div>
         </div>
 
         {/* Featured Projects */}
         <div className="mb-16">
-          <h3
-            className="text-2xl font-semibold mb-8"
-            style={{ color: "#a8b2d1" }}
-          >
+          <h3 className="text-2xl font-semibold mb-8" style={{ color: '#a8b2d1' }}>
             Projetos em Destaque
           </h3>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -138,9 +122,7 @@ export default function Projects() {
                       {project.title}
                     </h4>
 
-                    <p className="text-slate-300 mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
+                    <p className="text-slate-300 mb-4 leading-relaxed">{project.description}</p>
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech) => (
@@ -187,9 +169,7 @@ export default function Projects() {
 
         {/* Other Projects */}
         <div>
-          <h3 className="text-2xl font-semibold mb-8 text-slate-300">
-            Outros Projetos
-          </h3>
+          <h3 className="text-2xl font-semibold mb-8 text-slate-300">Outros Projetos</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {otherProjects.map((project, index) => (
               <div
@@ -207,18 +187,12 @@ export default function Projects() {
                     {project.title}
                   </h4>
 
-                  <p className="text-slate-400 text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <p className="text-slate-400 text-sm mb-4 leading-relaxed">{project.description}</p>
 
                   <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                       {project.technologies.slice(0, 3).map((tech) => (
-                        <div
-                          key={tech.name}
-                          className="text-slate-400"
-                          title={tech.name}
-                        >
+                        <div key={tech.name} className="text-slate-400" title={tech.name}>
                           {tech.icon}
                         </div>
                       ))}
