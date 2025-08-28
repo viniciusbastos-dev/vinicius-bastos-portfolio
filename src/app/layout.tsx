@@ -57,7 +57,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="lLZmQ6GssblPpL7Ydr4RhSpmFVGVrtxy9HpNkN6j99s" />
       </head>
 
-      <body>
+      <body className="bg-navy text-lightest-slate">
         <SidebarProvider>
           <Header />
           {children}

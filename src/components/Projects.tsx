@@ -84,13 +84,15 @@ export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto px-4">
       <div ref={containerRef} className="opacity-0 animate-fade-in-up animation-delay-300">
-        <h2 className="text-5xl font-bold mb-16 text-center text-slate-700">
-          Projetos
-        </h2>
+        <div className="flex items-center gap-4 mb-16">
+          <span className="font-SFMono text-lg text-green-700">02.</span>
+          <h2 className="font-SFMono text-4xl font-bold text-lightest-slate">Projetos</h2>
+          <div className="flex-1 h-px ml-8 bg-slate-700"></div>
+        </div>
 
         {/* Featured Projects */}
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-slate-300">Projetos em Destaque</h3>
+          <h3 className="text-2xl font-semibold mb-8" style={{ color: '#a8b2d1' }}>Projetos em Destaque</h3>
           <div className="grid lg:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <div

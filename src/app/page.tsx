@@ -10,15 +10,15 @@ export default function Home() {
       <SectionContainer id="hero" className="min-h-screen flex flex-col justify-center mx-auto sm:ml-[10%]">
         <Hero />
       </SectionContainer>
-      <SectionContainer id="sobre-mim" className="min-h-screen flex items-center">
+      <SectionContainer id="sobre-mim" className="min-h-screen flex items-center mb-10">
         <About />
       </SectionContainer>
 
-      <SectionContainer id="projetos" className="min-h-screen flex items-center">
+      <SectionContainer id="projetos" className="min-h-screen flex items-center mb-10">
         <Projects />
       </SectionContainer>
 
-      <SectionContainer id="contato" className="min-h-screen">
+      <SectionContainer id="contato" className="min-h-screen mb-10">
         <h1>Contato</h1>
       </SectionContainer>
 
