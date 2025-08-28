@@ -1,6 +1,56 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Custom animations for About section */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-in {
+  animation: slide-in-left 0.7s ease-out forwards;
+}
+
+.animate-in:nth-child(2) {
+  animation: slide-in-right 0.7s ease-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
