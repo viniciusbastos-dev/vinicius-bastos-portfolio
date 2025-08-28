@@ -73,15 +73,14 @@ export default function About() {
               <div className="absolute -left-4 top-0 w-1 h-full bg-green-700 rounded-full"></div>
               <div className="space-y-6 pl-8">
                 <p className="text-xl leading-relaxed text-slate-light">
-                  Sou um <span className="font-semibold text-green-700">desenvolvedor Frontend</span> com mais de 1 ano
-                  de experiência em React, Next.js, TypeScript e desenvolvimento mobile. Atualmente trabalho alocado na
-                  <span className="text-green-700"> FHEMIG</span>, onde entreguei 7 módulos de dashboard em 3 meses.
+                  Sou um <span className="font-semibold text-green-700">desenvolvedor Front-end</span> com 2 anos de 
+                  experiência em React, Next.js e Tailwind CSS. Atuo em projetos do setor público e privado, com destaque 
+                  para <span className="text-green-700"> FHEMIG</span> (via Otther) e liderança técnica na AbacatePay.
                 </p>
                 <p className="text-xl leading-relaxed text-slate-light">
-                  Também atuo na <span className="font-semibold text-green-700">AbacatePay</span> como
-                  <span className="text-green-700"> referência técnica</span>, com experiência fullstack em Fastify,
-                  MongoDB e APIs de pagamento. Mentorei 3 desenvolvedores juniores, sempre focando em qualidade e boas
-                  práticas.
+                  Tenho experiência com arquitetura de componentes, integração de APIs REST, CI/CD com GitHub Actions e 
+                  Azure. Sou referência técnica, com perfil colaborativo, mentoria de juniores e rápida adaptação a 
+                  diferentes stacks e padrões de código.
                 </p>
               </div>
             </div>
