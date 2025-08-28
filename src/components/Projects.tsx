@@ -2,9 +2,60 @@
 
 import { useEffect, useRef } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
-import { TbBrandReact, TbBrandNextjs, TbBrandTypescript, TbBrandHtml5, TbBrandCss3 } from 'react-icons/tb';
+import {
+  TbBrandReact,
+  TbBrandNextjs,
+  TbBrandTypescript,
+  TbBrandCss3,
+  TbBrandTailwind,
+  TbBrandMongodb,
+} from 'react-icons/tb';
+import { SiBun } from 'react-icons/si';
 
 const projects = [
+  {
+    title: 'LoveSpark',
+    description:
+      'Plataforma completa para presentes personalizados com marketplace e sistema de pagamentos. Fullstack com Next.js 15, Tailwind v4, Elysia, MongoDB e AbacatePay, utilizando Turborepo.',
+    technologies: [
+      { name: 'Next.js 15', icon: <TbBrandNextjs className="w-5 h-5" /> },
+      { name: 'Tailwind v4', icon: <TbBrandTailwind className="w-5 h-5" /> },
+      { name: 'Elysia', icon: <SiBun className="w-5 h-5" /> },
+      { name: 'MongoDB', icon: <TbBrandMongodb className="w-5 h-5" /> },
+    ],
+    github: null,
+    demo: 'https://lovespark.com.br',
+    featured: true,
+  },
+  {
+    title: 'MySelfie',
+    description:
+      'Plataforma completa para fotógrafos gerenciarem portfólio e clientes. Sistema com frontend React e backend em múltiplas tecnologias (Go e Node.js).',
+    technologies: [
+      { name: 'React', icon: <TbBrandReact className="w-5 h-5" /> },
+      { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
+      { name: 'Node.js', icon: <TbBrandNextjs className="w-5 h-5" /> },
+      { name: 'MongoDB', icon: <TbBrandMongodb className="w-5 h-5" /> },
+    ],
+    github: null,
+    demo: null,
+    featured: true,
+    inProgress: true,
+  },
+  {
+    title: 'CMS Otther',
+    description:
+      'Sistema de gerenciamento de conteúdo customizado desenvolvido para agência digital. Frontend e backend integrados para gestão completa de projetos e clientes.',
+    technologies: [
+      { name: 'React', icon: <TbBrandReact className="w-5 h-5" /> },
+      { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
+      { name: 'Node.js', icon: <TbBrandNextjs className="w-5 h-5" /> },
+      { name: 'MongoDB', icon: <TbBrandMongodb className="w-5 h-5" /> },
+    ],
+    github: null,
+    demo: null,
+    featured: true,
+  },
   {
     title: 'Portfolio Moderno',
     description:
@@ -14,45 +65,19 @@ const projects = [
       { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
       { name: 'Tailwind', icon: <TbBrandCss3 className="w-5 h-5" /> },
     ],
-    github: 'https://github.com/viniciusbastos-dev/portfolio',
+    github: 'https://github.com/viniciusbastos-dev/vinicius-bastos-portfolio',
     demo: null,
-    featured: true,
+    featured: false,
   },
   {
-    title: 'Decodificador de Texto',
-    description:
-      'Primeiro challenge Oracle ONE - Aplicação para criptografar e descriptografar textos com interface intuitiva.',
-    technologies: [
-      { name: 'HTML', icon: <TbBrandHtml5 className="w-5 h-5" /> },
-      { name: 'CSS', icon: <TbBrandCss3 className="w-5 h-5" /> },
-      { name: 'JavaScript', icon: <TbBrandReact className="w-5 h-5" /> },
-    ],
-    github: 'https://github.com/viniciusbastos-dev/Challenge-Oracle-ONE-Criptografador',
-    demo: null,
-    featured: true,
-  },
-  {
-    title: 'Plataforma para Fotógrafos',
-    description:
-      'Plataforma completa para fotógrafos gerenciarem portfólio e clientes. Em desenvolvimento com tecnologias modernas.',
+    title: 'The Movie Dictionary',
+    description: 'Aplicação para busca e descoberta de filmes usando a API do TMDB. Interface moderna e responsiva.',
     technologies: [
       { name: 'React', icon: <TbBrandReact className="w-5 h-5" /> },
       { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
-      { name: 'Node.js', icon: <TbBrandNextjs className="w-5 h-5" /> },
-    ],
-    github: null,
-    demo: null,
-    featured: true,
-    inProgress: true,
-  },
-  {
-    title: 'Barbearia Alura',
-    description: 'Website responsivo para barbearia desenvolvido durante cursos de HTML e CSS da Alura.',
-    technologies: [
-      { name: 'HTML', icon: <TbBrandHtml5 className="w-5 h-5" /> },
       { name: 'CSS', icon: <TbBrandCss3 className="w-5 h-5" /> },
     ],
-    github: 'https://github.com/viniciusbastos-dev/Projeto-Barbearia-Alura',
+    github: 'https://github.com/viniciusbastos-dev/The-Movie-Dictionary',
     demo: null,
     featured: false,
   },
