@@ -20,6 +20,12 @@
       "recommended": true,
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "style": {
+        "useImportType": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "warn"
       }
     },
     "domains": {

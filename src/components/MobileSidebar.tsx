@@ -10,7 +10,7 @@ import {
   SidebarTrigger,
 } from './ui/sidebar';
 import Link from 'next/link';
-import Button from './Button';
+import { Button } from './ui/button';
 import { SheetTitle } from './ui/sheet';
 import { LINKS } from '@/config/routes';
 import { X } from 'lucide-react';
@@ -43,7 +43,7 @@ export default function MobileSidebar() {
 
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Button small>Currículo</Button>
+                  <Button variant="custom" size="small">Currículo</Button>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

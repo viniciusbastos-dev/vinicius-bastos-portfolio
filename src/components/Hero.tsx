@@ -1,29 +1,28 @@
-import React from "react";
-import * as motion from "motion/react-client";
+import React from 'react';
+import * as motion from 'motion/react-client';
 
-interface Props {}
-const Hero: React.FC<Props> = () => {
+export default function Hero() {
   const components = [
     {
-      type: "h1",
-      text: "Olá, me chamo",
-      className: "text-xs md:text-sm text-green_700 mb-5 sm:mb-6 font-firaCode",
+      type: 'h1',
+      text: 'Olá, me chamo',
+      className: 'text-xs md:text-sm text-green-700 mb-5 sm:mb-6 font-firaCode',
     },
     {
-      type: "h2",
-      text: "Vinícius Bastos",
+      type: 'h2',
+      text: 'Vinícius Bastos',
       className:
-        "text-slate_300 text-c8xl  font-display font-semibold leading-[1.1]",
+        'text-4xl md:text-5xl lg:text-6xl xl:text-7xl  text-slate-300 font-display font-semibold leading-[1.1]',
     },
     {
-      type: "h3",
-      text: "Desenvolvedor Front-end",
-      className: "text-c8xl font-display font-semibold leading-[0.9]",
+      type: 'h3',
+      text: 'Desenvolvedor Front-end',
+      className: 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-semibold leading-[0.9]',
     },
     {
-      type: "p",
-      text: "Especializado em criar experiências digitais eficientes e acessíveis, com foco em soluções inovadoras e centradas no usuário.",
-      className: "mt-5 font-firaCode text-sm sm:text-base max-w-[550px]",
+      type: 'p',
+      text: 'Especializado em criar experiências digitais eficientes e acessíveis, com foco em soluções inovadoras e centradas no usuário.',
+      className: 'mt-5 font-firaCode text-sm sm:text-base max-w-[550px]',
     },
   ];
 
@@ -39,22 +38,11 @@ const Hero: React.FC<Props> = () => {
           },
         };
         return (
-          <motion.div
-            key={index}
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-          >
-            {React.createElement(
-              component.type,
-              { className: component.className },
-              component.text
-            )}
+          <motion.div key={component.text} initial="hidden" animate="visible" variants={fadeIn}>
+            {React.createElement(component.type, { className: component.className }, component.text)}
           </motion.div>
         );
       })}
     </>
   );
-};
-
-export default Hero;
+}

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import NavLink from './NavLink';
-import Button from './Button';
+import { Button } from './ui/button';
 import { motion } from 'motion/react';
 import { SidebarTrigger, useSidebar } from './ui/sidebar';
 import MobileSidebar from './MobileSidebar';
@@ -40,7 +40,7 @@ export default function Header() {
         <header
           className={cn(
             'z-50 hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-firaCode transition-all duration-300 backdrop-blur-md',
-            scrollDir === 'up' && !isOnTop && 'h-[70px] translate-y-0 bg-navy_700/85 shadow-lg rounded-b-lg',
+            scrollDir === 'up' && !isOnTop && 'h-[70px] translate-y-0 bg-navy-700/85 shadow-lg rounded-b-lg',
             scrollDir === 'down' && !isOnTop && 'h-[70px] -translate-y-[70px] '
           )}
         >
@@ -50,7 +50,7 @@ export default function Header() {
                 <React.Fragment key={link.href}>
                   <motion.li initial="hidden" animate="visible" variants={fadeDown(index)}>
                     <NavLink href={link.href}>
-                      <span className="text-green_700 text-sm">
+                      <span className="text-green-700 text-sm">
                         {index < 10 ? `0${index + 1}. ` : `${index + 1}. `}
                       </span>
                       {link.text}
@@ -58,7 +58,7 @@ export default function Header() {
                   </motion.li>
                   {index === LINKS.length - 1 && (
                     <motion.li initial="hidden" animate="visible" variants={fadeDown(index + 1)}>
-                      <Button small>Currículo</Button>
+                      <Button variant="custom" size="small">Currículo</Button>
                     </motion.li>
                   )}
                 </React.Fragment>
