@@ -6,11 +6,11 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<Props> = ({ children, small, ...rest }) => {
-  const variant = small ? "px-4 py-3" : "px-7 py-5";
+  const variant = small ? "px-5 py-2.5" : "px-7 py-4";
   return (
     <button
       {...rest}
-      className={`text-green_700 border-green_700 border-1 font-mono text-sm rounded-md transition duration-500 ease-in-out hover:shadow-xsm hover:shadow-green_700 ${variant}`}
+      className={`text-neon border-neon/60 border font-mono text-sm rounded-full transition-all duration-300 ease-in-out hover:bg-neon hover:text-ink ${variant}`}
     >
       {children}
     </button>

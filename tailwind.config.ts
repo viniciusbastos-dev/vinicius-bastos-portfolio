@@ -15,9 +15,20 @@ const config: Config = {
   		},
   		fontSize: {
   			c8xl: 'clamp(40px, 8vw, 80px)',
-  			c6xl: 'clamp(30px, 6vw, 60px)'
+  			c6xl: 'clamp(30px, 6vw, 60px)',
+  			display: 'clamp(3rem, 13vw, 13rem)',
+  			mega: 'clamp(4rem, 18vw, 20rem)'
   		},
   		colors: {
+  			ink: '#08080A',
+  			'ink-2': '#0D0D10',
+  			'ink-3': '#16161B',
+  			'ink-4': '#22222A',
+  			chalk: '#F4F4F2',
+  			fog: '#8A8A93',
+  			'fog-dim': '#5A5A63',
+  			neon: '#CCFF00',
+  			violet: '#7C6FF0',
   			navy_700: '#0A192F',
   			navy_500: '#112240',
   			navy_300: '#233554',
@@ -87,6 +98,30 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			marquee: {
+  				'0%': { transform: 'translateX(0)' },
+  				'100%': { transform: 'translateX(-50%)' }
+  			},
+  			'marquee-rev': {
+  				'0%': { transform: 'translateX(-50%)' },
+  				'100%': { transform: 'translateX(0)' }
+  			},
+  			'spin-slow': {
+  				'0%': { transform: 'rotate(0deg)' },
+  				'100%': { transform: 'rotate(360deg)' }
+  			},
+  			blink: {
+  				'0%, 100%': { opacity: '1' },
+  				'50%': { opacity: '0' }
+  			}
+  		},
+  		animation: {
+  			marquee: 'marquee var(--marquee-duration, 30s) linear infinite',
+  			'marquee-rev': 'marquee-rev var(--marquee-duration, 30s) linear infinite',
+  			'spin-slow': 'spin-slow 18s linear infinite',
+  			blink: 'blink 1.1s step-end infinite'
   		}
   	}
   },

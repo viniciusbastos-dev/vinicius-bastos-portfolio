@@ -42,15 +42,29 @@ const Header: React.FC<Props> = () => {
       {!isMobile ? (
         <header
           className={cn(
-            "hidden md:flex fixed top-0 inset-x-0 px-16 h-[100px] justify-end items-center font-mono transition-all duration-300 backdrop-blur-md",
+            "hidden md:flex fixed top-0 inset-x-0 z-50 px-16 h-[100px] justify-between items-center font-mono transition-all duration-300 backdrop-blur-md",
             scrollDir === "up" &&
               !isOnTop &&
-              "h-[70px] translate-y-0 bg-navy_700/85 shadow-xlg",
+              "h-[70px] translate-y-0 bg-ink/80 border-b border-ink-3 shadow-xlg",
             scrollDir === "down" && !isOnTop && "h-[70px] -translate-y-[70px] "
           )}
         >
-          <nav className="navigation-container md:flex items-center gap-5 hidden">
-            <ul className="flex gap-5 items-center">
+          <motion.a
+            href="/#hero"
+            initial="hidden"
+            animate="visible"
+            variants={fadeDown(0)}
+            className="group flex items-center gap-2 text-chalk"
+          >
+            <span className="grid size-8 place-items-center rounded-md border border-neon/50 font-display text-sm font-semibold text-neon transition-colors group-hover:bg-neon group-hover:text-ink">
+              VB
+            </span>
+            <span className="text-sm text-fog transition-colors group-hover:text-chalk">
+              vinicius.dev
+            </span>
+          </motion.a>
+          <nav className="navigation-container md:flex items-center gap-6 hidden">
+            <ul className="flex gap-6 items-center">
               {Links.map((link, index) => (
                 <React.Fragment key={link.href}>
                   <motion.li
@@ -59,7 +73,7 @@ const Header: React.FC<Props> = () => {
                     variants={fadeDown(index)}
                   >
                     <NavLink href={link.href}>
-                      <span className="text-green_700 text-sm">
+                      <span className="text-neon text-sm">
                         {index < 10 ? `0${index + 1}. ` : `${index + 1}. `}
                       </span>
                       {link.text}

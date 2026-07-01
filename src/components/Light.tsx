@@ -24,7 +24,7 @@ const FlyingLight: React.FC<Props> = () => {
     <div
       className={`pointer-events-none fixed inset-0 z-30 transition duration-500`}
       style={{
-        background: `radial-gradient(400px at ${position.x}px ${position.y}px, rgba(24, 58, 117, 0.35), transparent 80%)`,
+        background: `radial-gradient(500px at ${position.x}px ${position.y}px, rgba(124, 111, 240, 0.10), transparent 80%)`,
       }}
     />
   );

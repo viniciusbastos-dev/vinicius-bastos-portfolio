@@ -4,7 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import MobileSidebar from "@/components/MobileSidebar";
+import SmoothScroll from "@/components/SmoothScroll";
+import Preloader from "@/components/Preloader";
+import Cursor from "@/components/Cursor";
 
 const SFMono = localFont({
   src: [{ path: "../assets/fonts/SFMono-Regular.otf", weight: "400" }],
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
   title: "Vinícius Bastos - Portfólio",
   creator: "Vinícius Bastos",
   description:
-    "Portfólio de Vinícius Bastos, desenvolvedor front-end com experiência em JavaScript, TypeScript, React, React Native, Next.js, Styled-Components e Tailwind. Exploração de projetos de interfaces modernas e responsivas.",
+    "Portfólio de Vinícius Bastos, desenvolvedor fullstack. React, Next.js, React Native, TypeScript, Node.js, NestJS, Golang, PostgreSQL e mais — do front ao back, com foco em performance e motion.",
   keywords: [
     "Vinícius Bastos",
     "desenvolvedor front-end",
@@ -61,12 +63,16 @@ export default function RootLayout({
         />
       </head>
 
-      <body>
-        <SidebarProvider>
-          <Header />
-          {children}
-        </SidebarProvider>
-        <Footer />
+      <body className="grain">
+        <Preloader />
+        <Cursor />
+        <SmoothScroll>
+          <SidebarProvider>
+            <Header />
+            {children}
+          </SidebarProvider>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
