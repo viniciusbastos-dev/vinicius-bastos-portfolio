@@ -46,6 +46,8 @@ export default function Projects() {
           <li key={p.index}>
             <a
               href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
               data-cursor="abrir"
               onMouseEnter={() => setActive(p)}
               onMouseLeave={() => setActive(null)}
