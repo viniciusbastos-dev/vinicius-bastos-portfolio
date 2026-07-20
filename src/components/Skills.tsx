@@ -2,6 +2,7 @@
 
 import { skillGroups, marqueeSkills } from "@/config/config";
 import Reveal from "./Reveal";
+import BorderGlow from "./ui/BorderGlow";
 
 export default function Skills() {
   return (
@@ -23,33 +24,40 @@ export default function Skills() {
 
       <Reveal
         stagger
-        className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-3 bg-ink-3 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
       >
         {skillGroups.map((group) => (
-          <div
+          <BorderGlow
             key={group.label}
-            className="group bg-ink p-7 transition-colors hover:bg-ink-2"
+            className="h-full"
+            borderRadius={16}
+            backgroundColor="#0D0D10"
+            glowColor="72 100 50"
+            colors={["#CCFF00", "#7C6FF0", "#F4F4F2"]}
+            glowRadius={30}
           >
-            <div className="mb-6 flex items-baseline justify-between">
-              <h3 className="font-display text-xl font-semibold text-chalk">
-                {group.label}
-              </h3>
-              <span className="font-mono text-xs text-fog-dim">
-                {group.items.length}
-              </span>
+            <div className="p-7">
+              <div className="mb-6 flex items-baseline justify-between">
+                <h3 className="font-display text-xl font-semibold text-chalk">
+                  {group.label}
+                </h3>
+                <span className="font-mono text-xs text-fog-dim">
+                  {group.items.length}
+                </span>
+              </div>
+              <ul className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    data-cursor=""
+                    className="rounded-full border border-ink-4 px-3 py-1.5 font-mono text-xs text-fog transition-all duration-300 hover:border-neon hover:text-neon"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="flex flex-wrap gap-2">
-              {group.items.map((item) => (
-                <li
-                  key={item}
-                  data-cursor=""
-                  className="rounded-full border border-ink-4 px-3 py-1.5 font-mono text-xs text-fog transition-all duration-300 hover:border-neon hover:text-neon"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </BorderGlow>
         ))}
       </Reveal>
 

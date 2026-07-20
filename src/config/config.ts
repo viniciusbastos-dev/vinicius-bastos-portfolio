@@ -24,6 +24,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       "React",
       "Next.js",
+      "Astro",
       "React Native",
       "Vite",
       "TypeScript",
@@ -34,7 +35,15 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "NestJS", "Fastify", "ElysiaJS", "Golang", "BullMQ"],
+    items: [
+      "Node.js",
+      "NestJS",
+      "Fastify",
+      "ElysiaJS",
+      "Eden Treaty",
+      "Golang",
+      "BullMQ",
+    ],
   },
   {
     label: "Data",
@@ -44,6 +53,7 @@ export const skillGroups: SkillGroup[] = [
     label: "Data Flow & Forms",
     items: [
       "TanStack Query",
+      "Zustand",
       "Axios",
       "React Hook Form",
       "Zod",
@@ -58,7 +68,9 @@ export const skillGroups: SkillGroup[] = [
       "GitHub Actions",
       "Azure DevOps",
       "AWS S3",
-      "Cloudflare",
+      "Cloudflare Workers",
+      "Cloudflare R2",
+      "Vercel",
     ],
   },
   {
